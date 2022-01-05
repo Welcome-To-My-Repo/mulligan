@@ -8,5 +8,10 @@ Mulligan is an alternative C standard library incorporating modern concepts of a
 It's designed to be a drop-in replacement for the C standard library, although it can be used in parallel if needed.
 
 # How is Mulligan different?
-The first difference is that Mulligan is largely a header-only library.
-There are a few primitive abstractions which require a shared object, but that object is small compared to other monolithic libraries.
+
+## Lightweight
+
+Mulligan is a header-only library.
+There are a number of reasons to avoid using dynamic linking in modern software. 
+Software that uses load-time linking loads much slower and nothing contained in the linked objects can be optimized with the rest of the program.
+This all leads to larger and more inefficient software.
